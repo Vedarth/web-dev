@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Please Enter Your Details For Our Dating Website!</h1>
-<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
 	<fieldset>
 		<legend>Your Face</legend>
 		<label for="filetoupload">Your image:</label>
@@ -20,9 +20,9 @@
 		<input type="text" name="txt1" id="txt1" placeholder="Your full name" required>
 		<br>
 		<label>Gender:</label>
-		<input type="radio" name="Male" id="Male" required>
+		<input type="radio" name="Gender" id="Male" value="Male" required>
 		<label for="Male">Male</label>
-		<input type="radio" name="Female" id="Female" required>
+		<input type="radio" name="Gender" id="Female" value="Female" required>
 		<label for="Female">Female</label>
 		<br>
 		<label for="txt2">Age:</label>
