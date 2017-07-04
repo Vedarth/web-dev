@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>date1</title>
+	<title>date2</title>
+	<style type="text/css">
+		fieldset{background: lightyellow;border:10px solid yellow;margin-bottom:10px;width: 720px}
+		label{width: 180px;display: inline-block;text-align: right;text-align: top;}
+		#check{width: auto;}
+		#ranrig{background-color: purple; width: 50px; color: white;text-align: center;}
+		#ranlef{background-color: crimson;color: white;text-align: center;width: 50px}
+		
+	</style>
 </head>
 <body>
 <h1>Please Enter Your Details For Our Dating Website!</h1>
@@ -20,10 +28,10 @@
 		<input type="text" name="txt1" id="txt1" placeholder="Your full name" required>
 		<br>
 		<label>Gender:</label>
-		<input type="radio" name="Gender" id="Male" value="Male" required>
-		<label for="Male">Male</label>
-		<input type="radio" name="Gender" id="Female" value="Female" required>
-		<label for="Female">Female</label>
+		<input type="radio" name="Gender" id="checkbox" value="Male" required>
+		<label for="Male" id="check">Male</label>
+		<input type="radio" name="Gender" id="checkbox" value="Female" required>
+		<label for="Female" id="check">Female</label>
 		<br>
 		<label for="txt2">Age:</label>
 		<input type="text" name="txt2" id="txt2" value="18">
@@ -47,15 +55,13 @@
 
 	<fieldset>
 		<legend>Your Indicators</legend>
-		<label for="range1">Height:</label>
-		<label>Short</label>
-		<input type="range" name="range1" id="range1" min="0" max="100">
-		<label>Tall</label>
+		<label id="ranl">Height:<label id="ranlef">Short</label></label>
+		<input type="range" name="range1" id="range" min="0" max="100">
+		<label id="ranrig">Tall</label>
 		<br>
-		<label for="range2">Salary:</label>
-		<label>Poor</label>
-		<input type="range" name="range2" id="range2" min="0" max="100">
-		<label>Rich</label>
+		<label id="ranl">Salary:<label id="ranlef">Poor</label></label>
+		<input type="range" name="range2" id="range" min="0" max="100">
+		<label id="ranrig">Rich</label>
 	</fieldset>
 
 	<fieldset>
@@ -71,12 +77,12 @@
 		</textarea>
 		<br>
 		<label>Method to contact you:</label>
-		<input type="checkbox" name="checkbox1" id="checkbox1">
-		<label for="checkbox1">Email</label>
-		<input type="checkbox" name="checkbox2" id="checkbox2">
-		<label for="checkbox2">Whatsapp</label>
-		<input type="checkbox" name="checkbox3" id="checkbox3">
-		<label for="checkbox3">In-app chat</label>
+		<input type="checkbox" name="checkbox1" id="checkbox">
+		<label for="checkbox1" id="check">Email</label>
+		<input type="checkbox" name="checkbox2" id="checkbox">
+		<label for="checkbox2" id="check">Whatsapp</label>
+		<input type="checkbox" name="checkbox3" id="checkbox">
+		<label for="checkbox3" id="check">In-app chat</label>
 	</fieldset>
 <input type="submit" value="Submit">
 </form>
