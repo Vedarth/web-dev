@@ -9,12 +9,15 @@
 		#ranrig{background-color: purple; width: 50px; color: white;text-align: center;}
 		#ranlef{background-color: crimson;color: white;text-align: center;width: 50px}
 		#textarea{width: 360px;height: 50px;}
+		label:hover { font-size:25px }
+		input:hover { font-size:25px }
 		
 	</style>
 </head>
 <body>
-<h1>Please Enter Your Details For Our Dating Website!</h1>
+
 <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="get" enctype="multipart/form-data">
+<h1>Please Enter Your Details For Our Dating Website!</h1>
 	<fieldset>
 		<legend>Your Face</legend>
 		<label for="filetoupload">Your image:</label>
@@ -74,18 +77,18 @@
 		<input type="tel" name="mobile" id="mobile">
 		<br>
 		<label for="textarea">Address:</label>
-		<textarea name="textarea" id="textarea">
-		</textarea>
+		<textarea name="textarea" id="textarea"></textarea>
 		<br>
-		<label>Method to contact you:</label>
-		<input type="checkbox" name="checkbox1" id="checkbox">
+		<label for="checkbox">Method to contact you:</label>
+		<input type="checkbox" id="check" name="checkbox">
 		<label for="checkbox1" id="check">Email</label>
-		<input type="checkbox" name="checkbox2" id="checkbox">
+		<input type="checkbox" id="check" name="checkbox">
 		<label for="checkbox2" id="check">Whatsapp</label>
-		<input type="checkbox" name="checkbox3" id="checkbox">
+		<input type="checkbox" id="check" name="checkbox">
 		<label for="checkbox3" id="check">In-app chat</label>
 	</fieldset>
 <input type="submit" value="Submit">
 </form>
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 </html>
