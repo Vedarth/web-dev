@@ -3,29 +3,34 @@
 <head>
 	<title>Color Guess</title>
 </head>
+<body>
 <script type="text/javascript">
 	colors = ['red','blue','green','Aqua','Chocolate','Cyan','Teal','Orchid','Lavender','Gold','Brown','Indigo','Maroon','Yellow','Tomato','Ivory'];
 	
-	
 
-	function do_game(a) {
-		rand = math.floor(17*math.rand())
+	function do_game() {
+		rand = 17*Math.random();
+		rand = Math.floor(rand);
+		target = colors[rand];
+		while(1){
+		input = prompt('Choose a color from: ' + colors);
+		alert(target);
+		if(target.toUpperCase()==input.toUpperCase()){
+			ans(target);
+			break}
+		else
+			continue;
 		
 	}
-	while(){
-		input = prompt('Choose a color from: '+colors)
-		
-
-	}
+}
+	do_game();
 
 
 
-	function ans(color) {
-		document.body.style.backgroundColor = color;
-
+	function ans(target) {
+		document.body.style.backgroundColor = target;
 	}
 	</script>
-<body>
 
 </body>
 </html>
