@@ -5,7 +5,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	colors = ['Red','Rlue','Green','Aqua','Chocolate','Cyan','Teal','Orchid','Lavender','Gold','Brown','Indigo','Maroon',
+	colors = ['Red','Blue','Green','Aqua','Chocolate','Cyan','Teal','Orchid','Lavender','Gold','Brown','Indigo','Maroon',
 	'Yellow','Tomato','Ivory'];
 	colors.sort();
 	function do_game() {
@@ -14,14 +14,14 @@
 		rand = Math.floor(rand);
 		target = colors[rand];
 		while(1){
-		input = prompt('Choose a color from:\n' + colors);
+		input = prompt('I am thinking of one of these colors:\n' + colors.join(',')+'\nWhat color am I thinking of?');
 		if(guess==0)
 			alert(target);
 		guess++;
 		check_guess(input,target,rand);
 		if(target.toUpperCase()==input.toUpperCase()){
 			ans(target);
-			alert('Congratulations! You have guessed the color it took you '+guess+' guesses');
+			alert('Congratulations! You have guessed the color it took you '+guess+' guesses to beat the game.\nYou can see the color in the background');
 			break;}
 		else
 			continue;
@@ -49,11 +49,11 @@
 		{
 			if(rand<flag)
 			{
-				alert('Sorry your color is not correct.\nHint: Your color is alphabetically higher than mine');
+				alert('Sorry your color is not correct!\nHint: Your color is alphabetically higher than mine.\nPlease try again.');
 			}
 			if(rand>flag)
 			{
-				alert('Sorry your color is not correct.\nHint: Your color is alphabetically lower than mine');
+				alert('Sorry your color is not correct!\nHint: Your color is alphabetically lower than mine.\nPlease try again.');
 			}
 		}
 		if(flag==-1)
