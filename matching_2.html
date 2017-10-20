@@ -5,7 +5,6 @@
 	Matching Game
 	</title>
 <script type="text/javascript">
-	function myfun(argument) {
 	var numberOfFaces = 5;
 	var theLeftSide = document.getElementById("leftSide");
 	function generatefaces() {
@@ -13,8 +12,7 @@
 		img.src = http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png
 		img.style.top = Math.floor(Math.random()*401);
 		img.style.left = Math.floor(Math.random()*401);
-		
-	}
+		theLeftSide.appendChild(img);
 }
 </script>
 
