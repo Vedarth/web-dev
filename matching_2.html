@@ -8,14 +8,15 @@
 	var numberOfFaces = 5;
 	var theLeftSide = document.getElementById("leftSide");
 	function generatefaces() {
+		var theLeftSide = document.getElementById("leftSide");
 		for (var i = 0; i < numberOfFaces; i++) {
-		var img1=document.createElement("IMG");
-		img1.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+		var img = document.createElement("IMG");
+		img.src = "smile.png";
 		top = Math.floor(Math.random()*401);
-		img1.style.top = string(top + "px");
+		img.style.top = top + "px";
 		left = Math.floor(Math.random()*401);
-		img1.style.left = string(left + "px");
-		theLeftSide.appendChild(img1);
+		img.style.left = left + "px";
+		theLeftSide.appendChild(img);
 		}
 		
 }
