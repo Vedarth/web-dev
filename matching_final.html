@@ -7,7 +7,9 @@
 <script type="text/javascript">
 	var numberOfFaces = 5;
 	var theLeftSide = document.getElementById("leftside");
+	var theBody = document.getElementsByTagName("body")[0];
 	function generatefaces() {
+		var theBody = document.getElementsByTagName("body")[0];
 		for (var i = 0; i < numberOfFaces; i++) {
 		var theBody = document.getElementsByTagName("body")[0];
 		var theLeftSide = document.getElementById("leftside");
@@ -22,10 +24,14 @@
 		var leftimg = theLeftSide.cloneNode(true);
 		leftimg.removeChild(leftimg.lastChild)
 		theRightSide.appendChild(leftimg);
-}
-    function nextLevel(event){
+
+    theLeftSide.lastChild.onclick = function nextLevel(event){
         event.stopPropagation();
         numberOfFaces += 5;
+        while(theLeftSide.firstChild)
+        	theLeftSide.removeChild(theLeftSide.firstChild);
+        while(theRightSide.firstChild)
+        	theRightSide.removeChild(theRightSide.firstChild);
         generatefaces();
 };
 theBody.onclick = function gameOver() {
@@ -33,6 +39,7 @@ theBody.onclick = function gameOver() {
     theBody.onclick = null;
     theLeftSide.lastChild.onclick = null;
 };
+}
 </script>
 
 </head>
