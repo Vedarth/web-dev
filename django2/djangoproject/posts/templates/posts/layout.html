@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<title>
+        My Blogsite
+    </title>
+</head>
+<body>
+    <header class="container center-align">
+        <h1> My Blogsite </h1>
+    </header>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+        <br />
+        <a style="display:block" class="center-align" href="/admin">Admin Login</a>
+    </div>
+</body>
+</html>
