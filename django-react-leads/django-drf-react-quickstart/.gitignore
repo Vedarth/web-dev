@@ -1,0 +1,5 @@
+node_modules/
+Pipfile
+Pipfile.lock
+project/db.sqlite3
+project/frontend/cypress/
